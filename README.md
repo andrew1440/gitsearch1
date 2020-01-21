@@ -8,6 +8,8 @@ Andrew Odongo
 This is an application that contains repositories of the user and his/her followers.
 ## Codebeat
 [![codebeat badge](https://codebeat.co/badges/e84b9a70-ad38-4e8a-864f-40e01f3e974f)](https://codebeat.co/projects/github-com-andrew1440-gitsearch1-master)
+## Live Link
+https://andrew1440.github.io/gitsearch1/
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
