@@ -39,7 +39,15 @@ After extracting the files, run
 2 .ng serve.
 you can also run tests with ng test.
 
+## Behaviour Driven Development
+Inputs	Description
 
+Username	Github username, eg andrew1440
+Outputs	Description
+
+Profile data	A specific user profile info.
+
+Repositories	All repositories created by a us
 
 ## Development server
 
