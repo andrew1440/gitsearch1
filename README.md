@@ -26,6 +26,20 @@ npm
 angularCLI
 
 typescript
+## Setup
+
+Run https://github.com/kamauvick/gitSearch.git
+
+or download the zip file from github.
+
+After extracting the files, run
+
+1 . cd gitSearch.
+
+2 .ng serve.
+you can also run tests with ng test.
+
+
 
 ## Development server
 
