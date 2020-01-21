@@ -49,6 +49,9 @@ Profile data	A specific user profile info.
 
 Repositories	All repositories created by a us
 
+## License
+MIT License &copy 2019 Andrew Odongo
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
