@@ -28,7 +28,7 @@ angularCLI
 typescript
 ## Setup
 
-Run https://github.com/kamauvick/gitSearch.git
+Run https://github.com/andrew1440/gitSearch.git
 
 or download the zip file from github.
 
