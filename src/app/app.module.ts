@@ -10,6 +10,7 @@ import {ProfileService} from './services/profile.service';
 import { from } from 'rxjs';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DateCountPipe } from './date-count.pipe';
+import { GitHomeComponent } from './git-home/git-home.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { DateCountPipe } from './date-count.pipe';
     ProfileComponent,
     NavbarComponent,
     DateCountPipe,
+    GitHomeComponent,
     
   ],
   imports: [

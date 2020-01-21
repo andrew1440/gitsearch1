@@ -1,21 +1,14 @@
-body {
-    background-image: url("https://bit.ly/30CCnCE");;
+.home{
+    background-image: url("https://bit.ly/2R8K5S0");;
     background-size:cover;   
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
     background-position: 50% 50%;
     background-attachment: fixed;  
-
   }
-  
-  h1 {
-    color: white;
+  .welcome{
     text-align: center;
-  }
-  
-  p {
-    color: black;
-    font-family: verdana;
-    font-size: 25px;
+    padding-top: 27%;
+    color: white;
   }
