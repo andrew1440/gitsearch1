@@ -52,6 +52,9 @@ Repositories	All repositories created by a us
 ## License
 MIT License &copy 2019 Andrew Odongo
 
+## Collaborate
+For more information to collaborate follow drewodongo470@gmail.com
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
