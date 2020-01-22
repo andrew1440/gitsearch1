@@ -53,7 +53,7 @@ Repositories	All repositories created by a us
 MIT License &copy 2019 Andrew Odongo
 
 ## Collaborate
-For more information to collaborate follow drewodongo470@gmail.c
+For more information to collaborate follow drewodongo470@gmail.com
 
 ## Code scaffolding
 
