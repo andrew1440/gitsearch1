@@ -54,12 +54,3 @@ MIT License &copy 2019 Andrew Odongo
 
 ## Collaborate
 For more information to collaborate follow drewodongo470@gmail.com
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|modul
-
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
