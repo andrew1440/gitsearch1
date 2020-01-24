@@ -1,0 +1,93 @@
+<link href="https://fonts.googleapis.com/css?family=Pacifico|Yeon+Sung&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bangers|Lobster|Oswald&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<div class="container-fluid" id="head">
+  <h1>GITHUB <img
+      src="https://images.pexels.com/photos/1552617/pexels-photo-1552617.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      height="250px" width="250px"> FINDER</h1>
+  <form action="" class="form">
+    <div class="form-group">
+       <!-- <input type="text" placeholder="enter username here...." class="form-control" [(ngModel)]="username"
+        name="username" (keyup)="findProfile()"> -->
+        <div class="col">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control bg-transparent col-sm-6 offset-3" placeholder="Search here" aria-label="user" aria-describedby="basic-addon2" name="username" [(ngModel)]="username">
+            <div class="input-group-append">
+              <button class="btn btn-success" type="button"  (keyup)="findProfile()">Search</button>
+            </div>
+          </div>
+        </div>
+    </div>
+  </form><br><br>
+  <div class="p-center">
+    <p id="intro">Welcome to github serch <br>This site requires you to <br> enter your username<br>to locate your
+      github <br> profile </p>
+  </div>
+  <br><br>
+  <div *ngIf="profile" class="prof">
+    <div class="col-sm-8">
+      <div class="col-sm-2">
+        <img class="img" src="{{profile.avatar_url}}">
+      </div>
+      <div class="col-sm-3">
+        <ul class="list-group">
+          <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
+          <li class="list-group-item" *ngIf="profile.blog">{{profile.blog}}</li>
+          <li class="list-group-item" *ngIf="profile.hireable">{{profile.hireable}}</li>
+          <li class="list-group-item" *ngIf="profile.email">{{profile.email}}</li>
+        </ul>
+      </div>
+
+      <div class="col-sm-6">
+        <div>
+          <hr>
+          <p class="buton">
+            <span class="span" class="btn btn-primary"> {{profile.followers}} Followers</span>&nbsp;
+
+            <span class="span" class="btn btn-warning"> {{profile.following}} Following </span>&nbsp;
+
+            <span class="span" class="btn btn-info"> {{profile.public_gists}} gists</span>&nbsp;
+
+            <span class="span" class="btn btn-success"> {{profile.public_repos}} Repositories</span>
+          </p>
+          <hr>
+          <hr>
+
+          <p>
+            <a href="{{profile.html_url}}" target="_blank" class=" view  btn btn-info">View profile on github</a>
+
+          </p>
+          <hr>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container" id="repos">
+  <h1>Repositories.</h1>
+  <hr>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class=" col-sm-10card-columns">
+        <div class="card" *ngFor="let repos of repos">
+          <div class="card">
+            <div class=" text-center" class="card-header">
+              <h2 id="Rename">{{repos.name}}</h2>
+            </div>
+            <div class="card-body">
+              <p id="deco">
+                {{repos.description}}
+              </p>
+            </div>
+            <a href="{{repos.html_url}}" class="text-align-center" class="card-footer" target="_blank"
+              class="view btn btn-outline-info">View project source</a>
+            <div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

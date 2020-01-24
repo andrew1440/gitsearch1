@@ -1,0 +1,78 @@
+.img{
+    border-radius:40px;
+    height:300px;
+}
+h2{
+    font-family: 'Bangers', cursive;
+}
+.card-header{
+    background-color: silver;
+}
+.btn-outline-info{
+    background-color: silver;
+}
+.prof{
+    position: relative;
+    float: left;
+    width: 36vw;
+    padding-top:2%;
+    height: 70vh;
+    margin-left: 5%;
+}
+.buton{
+    display: flex;
+}
+
+#repos{
+    float: right;
+    position: relative;
+    top: 0;
+    display: block;
+    width: 350vw;
+}
+
+
+h1{
+    font-size: 70px;
+    font-weight:bold;
+    text-align:center;
+    padding:50px;
+    text-shadow: 4px 4px 5px grey; 
+    font-family: 'Oswald', sans-serif;
+}
+.container{
+    font-family: 'Lobster', cursive;
+    font-size: 25px;  
+}
+
+#head{
+    background-color: burlywood;
+    background-size: cover;
+    text-align: center;
+}
+input{
+    width: 50%;
+    margin-left: 25%;
+
+}
+.p-center{
+    text-align: center;
+}
+#intro{
+    height: 300px;
+    width: 500px;
+    margin-left: 35%;
+    margin-bottom: 5%;
+    display: block;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    border: dotted black 8px;
+    padding: 2%;
+    animation: trans 7s 3s alternate ease-in-out infinite ;
+    transform-origin: right top;
+    box-shadow: 7px 7px 10px grey;
+}
+@keyframes trans{from{transform: translateX(-600px);} to{transform: translateX(600px);}}
+.results{
+    color: beige;
+}
