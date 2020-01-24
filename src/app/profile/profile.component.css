@@ -6,10 +6,10 @@ h2{
     font-family: 'Helevitica', cursive;
 }
 .card-header{
-    background-color: silver;
+    background-color:whitesmoke;
 }
 .btn-outline-info{
-    background-color: silver;
+    background-color:whitesmoke;
 }
 .prof{
     position: relative;
@@ -24,7 +24,7 @@ h2{
 }
 
 #repos{
-    float: right;
+    text-align: center;
     position: relative;
     top: 0;
     display: block;
@@ -37,16 +37,16 @@ h1{
     font-weight:bold;
     text-align:center;
     padding:50px;
-    text-shadow: 4px 4px 5px grey; 
-    font-family: 'Oswald', sans-serif;
+    text-shadow: 4px 4px 5pxwhitesmoke; 
+    font-family: 'Helevitica', fantasy;
 }
 .container{
-    font-family: 'Lobster', cursive;
+    font-family: "fangsong", fantasy;
     font-size: 25px;  
 }
 
 #head{
-    background-color: burlywood;
+    background-image: url("https://bit.ly/36k8Gr7");
     background-size: cover;
     text-align: center;
 }
@@ -64,15 +64,15 @@ input{
     margin-left: 35%;
     margin-bottom: 5%;
     display: block;
-    font-family: 'Lobster', cursive;
+    font-family: system-ui;
     font-size: 30px;
     border: dotted black 8px;
     padding: 2%;
     animation: trans 7s 3s alternate ease-in-out infinite ;
     transform-origin: right top;
-    box-shadow: 7px 7px 10px grey;
+    box-shadow: 7px 7px 10px whitesmoke;
 }
 @keyframes trans{from{transform: translateX(-600px);} to{transform: translateX(600px);}}
 .results{
-    color: beige;
+    color: rgb(220, 228, 245);
 }
