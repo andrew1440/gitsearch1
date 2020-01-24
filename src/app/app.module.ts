@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule }from '@angular/forms';
 import { DateCountPipe } from './date-count.pipe';
 import { NavbarComponent } from './navbar/navbar.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,12 +18,14 @@ import { NavbarComponent } from './navbar/navbar.component';
     DateCountPipe,
     NavbarComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule
   ],
+  
   providers: [ProfileService],
   bootstrap: [AppComponent]
 })

@@ -3,10 +3,8 @@
 <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 <div class="container-fluid" id="head">
-  <h1>GITHUB <img
-      src="https://images.pexels.com/photos/1552617/pexels-photo-1552617.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-      height="250px" width="250px"> FINDER</h1>
-  <form action="" class="form">
+  <h1>GITHUB </h1>
+  <form action="" class="form" (ngSubmit) = "findProfile()">
     <div class="form-group">
        <!-- <input type="text" placeholder="enter username here...." class="form-control" [(ngModel)]="username"
         name="username" (keyup)="findProfile()"> -->
@@ -14,14 +12,14 @@
           <div class="input-group mb-3">
             <input type="text" class="form-control bg-transparent col-sm-6 offset-3" placeholder="Search here" aria-label="user" aria-describedby="basic-addon2" name="username" [(ngModel)]="username">
             <div class="input-group-append">
-              <button class="btn btn-success" type="button"  (keyup)="findProfile()">Search</button>
+              <button class="btn btn-success" type="submit">Search</button>
             </div>
           </div>
         </div>
     </div>
   </form><br><br>
   <div class="p-center">
-    <p id="intro">Welcome to github serch <br>This site requires you to <br> enter your username<br>to locate your
+    <p id="intro">Welcome to github search <br>This site requires you to <br> enter your username<br>to locate your
       github <br> profile </p>
   </div>
   <br><br>
