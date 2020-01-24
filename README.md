@@ -70,4 +70,4 @@ Tell:+254740478651
 Email:drewodong470@gmail.com
 
 ## license
-[MIT License](https://andrew1440.github.io/Gitsearch/blob/master/LICENSE) [benowino7](https://github.com/andrew1440). 
+[MIT License](https://andrew1440.github.io/Gitsearch/blob/master/LICENSE) [andrew1440](https://github.com/andrew1440). 
