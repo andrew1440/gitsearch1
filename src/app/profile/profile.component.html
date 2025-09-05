@@ -1,91 +1,79 @@
-<link href="https://fonts.googleapis.com/css?family=Pacifico|Yeon+Sung&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Bangers|Lobster|Oswald&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-<div class="container-fluid" id="head">
-  <h1>GITHUB </h1>
-  <form action="" class="form" (ngSubmit) = "findProfile()">
+<div class="search-section">
+  <h1>Search GitHub Profiles</h1>
+  <form class="search-form" (ngSubmit)="findProfile()">
     <div class="form-group">
-       <!-- <input type="text" placeholder="enter username here...." class="form-control" [(ngModel)]="username"
-        name="username" (keyup)="findProfile()"> -->
-        <div class="col">
-          <div class="input-group mb-3">
-            <input type="text" class="form-control bg-transparent col-sm-6 offset-3" placeholder="Search here" aria-label="user" aria-describedby="basic-addon2" name="username" [(ngModel)]="username">
-            <div class="input-group-append">
-              <button class="btn btn-success" type="submit">Search</button>
-            </div>
-          </div>
-        </div>
+      <input type="text" placeholder="Enter username" [(ngModel)]="username" name="username" class="search-input">
+      <button type="submit" class="search-btn">Search</button>
     </div>
-  </form><br><br>
-  <div class="p-center">
-    <p id="intro">Welcome to github search <br>This site requires you to <br> enter your username<br>to locate your
-      github <br> profile </p>
-  </div>
-  <br><br>
-  <div *ngIf="profile" class="prof">
-    <div class="col-sm-8">
-      <div class="col-sm-2">
-        <img class="img" src="{{profile.avatar_url}}">
-      </div>
-      <div class="col-sm-3">
-        <ul class="list-group">
-          <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
-          <li class="list-group-item" *ngIf="profile.blog">{{profile.blog}}</li>
-          <li class="list-group-item" *ngIf="profile.hireable">{{profile.hireable}}</li>
-          <li class="list-group-item" *ngIf="profile.email">{{profile.email}}</li>
-        </ul>
-      </div>
-
-      <div class="col-sm-6">
-        <div>
-          <hr>
-          <p class="buton">
-            <span class="span" class="btn btn-warning"> {{profile.followers}} Followers</span>&nbsp;
-
-            <span class="span" class="btn btn-primary"> {{profile.following}} Following </span>&nbsp;
-
-            <span class="span" class="btn btn-success"> {{profile.public_gists}} gists</span>&nbsp;
-
-            <span class="span" class="btn btn-danger"> {{profile.public_repos}} Repositories</span>
-          </p>
-          <hr>
-          <hr>
-
-          <p>
-            <a href="{{profile.html_url}}" target="_blank" class=" view  btn btn-success">View profile on github</a>
-
-          </p>
-          <hr>
-        </div>
-
-      </div>
+    <div class="filters">
+      <input type="text" placeholder="Filter repos by language" [(ngModel)]="languageFilter" name="language" class="filter-input">
+    </div>
+  </form>
+</div>
+<div *ngIf="!profile && !repos" class="loading-skeleton">
+  <div class="skeleton-card">
+    <div class="skeleton-avatar"></div>
+    <div class="skeleton-text"></div>
+    <div class="skeleton-text short"></div>
+    <div class="skeleton-stats">
+      <div class="skeleton-stat"></div>
+      <div class="skeleton-stat"></div>
+      <div class="skeleton-stat"></div>
+      <div class="skeleton-stat"></div>
     </div>
   </div>
 </div>
-<div class="container" id="repos">
-  <h1>Repositories.</h1>
-  <hr>
 
-  <div class="row">
-    <div class="col-md-12">
-      <div class=" col-sm-10card-columns">
-        <div class="card" *ngFor="let repos of repos">
-          <div class="card">
-            <div class=" text-center" class="card-header">
-              <h2 id="Rename">{{repos.name}}</h2>
-            </div>
-            <div class="card-body">
-              <p id="deco">
-                {{repos.description}}
-              </p>
-            </div>
-            <a href="{{repos.html_url}}" class="text-align-center" class="card-footer" target="_blank"
-              class="view btn btn-outline-info">View project source</a>
-            <div>
-            </div>
-          </div>
-        </div>
-      </div>
+<div *ngIf="profile" class="profile-card">
+  <div class="profile-header">
+    <img class="avatar" src="{{profile.avatar_url}}" alt="Avatar">
+    <div class="profile-info">
+      <h2>{{profile.name || profile.login}}</h2>
+      <p *ngIf="profile.bio">{{profile.bio}}</p>
+      <p *ngIf="profile.location">{{profile.location}}</p>
+      <p *ngIf="profile.company">{{profile.company}}</p>
     </div>
   </div>
+  <div class="stats">
+    <div class="stat">
+      <span class="number">{{profile.followers}}</span>
+      <span class="label">Followers</span>
+    </div>
+    <div class="stat">
+      <span class="number">{{profile.following}}</span>
+      <span class="label">Following</span>
+    </div>
+    <div class="stat">
+      <span class="number">{{profile.public_repos}}</span>
+      <span class="label">Repos</span>
+    </div>
+    <div class="stat">
+      <span class="number">{{profile.public_gists}}</span>
+      <span class="label">Gists</span>
+    </div>
+  </div>
+  <a href="{{profile.html_url}}" target="_blank" class="view-profile-btn">View on GitHub</a>
+</div>
+</div>
+<div *ngIf="repos && repos.length > 0" class="repos-section">
+  <h2>Repositories</h2>
+  <div class="repos-grid">
+    <div class="repo-card" *ngFor="let repo of repos">
+      <h3>{{repo.name}}</h3>
+      <p *ngIf="repo.description">{{repo.description}}</p>
+      <p *ngIf="!repo.description">No description available</p>
+      <div class="repo-stats">
+        <span *ngIf="repo.language" class="language-tag">{{repo.language}}</span>
+        <span class="stat-item">
+          <span class="stat-icon">⭐</span>
+          <span class="stat-value">{{repo.stargazers_count}}</span>
+        </span>
+        <span class="stat-item">
+          <span class="stat-icon">🍴</span>
+          <span class="stat-value">{{repo.forks_count}}</span>
+        </span>
+      </div>
+      <a href="{{repo.html_url}}" target="_blank" class="repo-link">View Repository</a>
+    </div>
+  </div>
+</div>

@@ -7,16 +7,21 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProfileService } from './profile.service'
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule }from '@angular/forms';
-import { DateCountPipe } from './date-count.pipe';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ParticlesComponent } from './particles/particles.component';
+import { DateCountPipe } from './date-count.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    DateCountPipe,
-    NavbarComponent
+    NavbarComponent,
+    HomeComponent,
+    AboutComponent,
+    ParticlesComponent
   ],
 
   imports: [

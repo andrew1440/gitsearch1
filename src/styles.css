@@ -1,8 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
-body{
-    background-attachment: fixed;
-    /* background-image: url("https://bit.ly/2YpWvqs"); */
-    background-size: cover;
-    
-    
+/* Global styles for minimalist theme */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Creative Typography */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.gradient-text-alt {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.text-shadow-glow {
+  text-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+.animated-text {
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(102, 126, 234, 0.8);
+  }
 }

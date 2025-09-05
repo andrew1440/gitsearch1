@@ -11,6 +11,7 @@ export class ProfileComponent implements OnInit {
   repos:any;
   username:string;
   searchTerm:string;
+  languageFilter:string;
   @Output() searchEmmiter = new EventEmitter<any>();
 
 constructor(private profileService:ProfileService){
@@ -38,7 +39,7 @@ findProfile(){
 
   this.profileService.getProfileRepos().subscribe(repos => {
     console.log(repos);
-    this.repos = repos;
+    this.repos = this.languageFilter ? (repos as any[]).filter(repo => repo.language && repo.language.toLowerCase().includes(this.languageFilter.toLowerCase())) : repos;
   })
 }
   ngOnInit() {
